@@ -85,3 +85,5 @@ The **NSData_Rest** project focuses on consuming a REST API using `URLSession` t
 
 ---
 ## License
+
+This repository is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
