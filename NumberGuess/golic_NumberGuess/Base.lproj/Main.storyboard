@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ONr-L5-Nxr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rtS-BD-8MJ">
+            <objects>
+                <navigationController id="ONr-L5-Nxr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8dL-2J-GjE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WDN-ow-hK1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hl8-5D-yIj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-732" y="100"/>
+        </scene>
+        <!--NumberGuess-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="golic_NumberGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the Number!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1P-Xh-eRx">
+                                <rect key="frame" x="133.5" y="385" width="147.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4P-6F-cg7">
+                                <rect key="frame" x="183" y="490" width="48" height="30"/>
+                                <state key="normal" title="Guess!"/>
+                                <connections>
+                                    <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="181-Vh-A6B"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8SK-a7-EKZ">
+                                <rect key="frame" x="157" y="431" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WUV-TY-RA4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMY-Ld-okt">
+                                <rect key="frame" x="169" y="520" width="76" height="30"/>
+                                <state key="normal" title="Show Tips!"/>
+                                <connections>
+                                    <segue destination="gKB-6U-tUA" kind="show" identifier="showTipsSegue" id="rbi-Bq-Xx6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsa-ke-Kem">
+                                <rect key="frame" x="167" y="550" width="80" height="30"/>
+                                <state key="normal" title="New Game!"/>
+                                <connections>
+                                    <action selector="onClickNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9sw-Qz-ACO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q1P-Xh-eRx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C8X-4h-l8y"/>
+                            <constraint firstItem="RMY-Ld-okt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CxC-VL-Vgg"/>
+                            <constraint firstItem="e4P-6F-cg7" firstAttribute="top" secondItem="8SK-a7-EKZ" secondAttribute="bottom" constant="25" id="ShR-tF-3aw"/>
+                            <constraint firstItem="e4P-6F-cg7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yrt-s2-RUj"/>
+                            <constraint firstItem="RMY-Ld-okt" firstAttribute="top" secondItem="e4P-6F-cg7" secondAttribute="bottom" id="bQ1-W6-tl4"/>
+                            <constraint firstItem="8SK-a7-EKZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i29-HQ-kNm"/>
+                            <constraint firstItem="8SK-a7-EKZ" firstAttribute="top" secondItem="q1P-Xh-eRx" secondAttribute="bottom" constant="25" id="jur-Rn-E60"/>
+                            <constraint firstItem="8SK-a7-EKZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kbs-bR-qUN"/>
+                            <constraint firstItem="lsa-ke-Kem" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="szx-PK-ey8"/>
+                            <constraint firstItem="lsa-ke-Kem" firstAttribute="top" secondItem="RMY-Ld-okt" secondAttribute="bottom" id="xse-Qq-RtJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NumberGuess" id="yAQ-Kf-cy0"/>
+                    <connections>
+                        <outlet property="guessInput" destination="8SK-a7-EKZ" id="OyS-Ms-FU1"/>
+                        <outlet property="titleLabel" destination="q1P-Xh-eRx" id="5ec-Cu-lBb"/>
+                        <segue destination="gKB-6U-tUA" kind="show" identifier="done" id="gbd-7Y-Qab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
+        </scene>
+        <!--Tips-->
+        <scene sceneID="R7e-DA-7eC">
+            <objects>
+                <tableViewController id="gKB-6U-tUA" customClass="TableViewController" customModule="golic_NumberGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BE8-AC-qng">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Guesses" id="LBg-nz-67z">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LBg-nz-67z" id="PGF-KG-gwX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gKB-6U-tUA" id="yZV-6o-Ntx"/>
+                            <outlet property="delegate" destination="gKB-6U-tUA" id="gVX-5f-G9s"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tips" id="b32-eE-2bQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAn-Lu-Kre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="100"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rbi-Bq-Xx6"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
